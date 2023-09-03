@@ -11,6 +11,8 @@ export class OrderComponent {
 
   public isUpperCase:boolean = false;
 
+  public keyOrder:keyof Hero | '' = '';
+
   public heroes:Hero[] = [
     {
       name:'Superman',
@@ -41,6 +43,10 @@ export class OrderComponent {
 
   toggleUperCase():void{
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  changeKeyOrder(value:keyof Hero | ''):void{
+    this.keyOrder = value;
   }
 
 }
